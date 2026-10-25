@@ -37,7 +37,7 @@ A command-line media downloader for YouTube, Instagram, and Twitter (X). Downloa
 
 ### 2. Setup
 ```bash
-git clone https://github.com/SEU-USUARIO/ripper-converter.git
+git clone https://github.com/lucas1755238/ripper-converter.git
 cd ripper-converter
 
 # Virtual environment
