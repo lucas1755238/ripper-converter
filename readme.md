@@ -1,89 +1,73 @@
-# 🎬 Ripper Converter
+# Ripper Converter
 
-A fast, lightweight, and 100% local command-line media downloader for **YouTube**, **Instagram**, and **Twitter (X)**.  
-Download videos in High Quality **MP4** or extract audio directly to **MP3 (320kbps)**.
-
----
-
-## ✨ Features
-
-- **Multi-Platform Support:** Seamlessly downloads from YouTube, Instagram, and Twitter (X).
-- **Auto Platform Detection:** Automatically identifies the source platform from the provided URL.
-- **Two Download Formats:**
-  - **MP4:** High-definition video with merged high-quality audio.
-  - **MP3:** Audio extraction encoded at 320 kbps.
-- **100% Local & Private:** No third-party servers, web APIs, or tracking involved—traffic is strictly between your machine and the media platform.
-- **Auto User Directory:** Automatically locates and stores downloads inside your default system `Downloads` folder.
-- **Persistent Session:** Stays running in your terminal/CMD so you can download multiple links sequentially without restarting.
-- **Authentication Support:** Cookie detection (`cookies.txt`) allows downloading private or restricted posts where login is required.
+A command-line media downloader for YouTube, Instagram, and Twitter (X). Downloads MP4 video or extracts MP3 audio (320kbps) locally.
 
 ---
 
-## 🚀 For Regular Users (Windows Executable)
+## Features
 
-No Python installation required:
-
-1. Navigate to the **[Releases](../../releases)** tab on the right side of this repository.
-2. Under the latest release (e.g., `Ripper Converter v1.0.0`), download the **`RipperConverter.exe`** binary from the **Assets** section.
-3. Double-click **`RipperConverter.exe`** to open the terminal interface.
-4. Paste the media link (YouTube, Instagram, or Twitter/X), select your preferred format (`1` for MP4, `2` for MP3), and press **Enter**.
-5. The downloaded file will be saved directly into your **Downloads** folder.
-6. Type `0` or `exit` to close the application when finished.
-
-> **Note for Instagram/Twitter (X):** If an Instagram Reel/post or a Twitter/X video requires login to be viewed, export your browser cookies as `cookies.txt` and place the file in the exact same directory as `RipperConverter.exe`.
+- **Multi-Platform:** Supports YouTube, Instagram, and Twitter (X).
+- **Auto Detection:** Identifies the target platform directly from the URL.
+- **Two Formats:** Best-quality MP4 video or 320kbps MP3 audio.
+- **Fully Local:** Runs entirely on your machine; no external processing servers.
+- **Automatic Output Path:** Saves files to your system `Downloads` folder.
+- **Persistent CLI:** Download multiple links sequentially without reopening the app.
+- **Cookie Support:** Loads `cookies.txt` for restricted or login-gated content.
 
 ---
 
-## 💻 For Developers (Running from Source)
+## Windows Executable (No Python Required)
 
-### 1. Prerequisites
-- Python 3.8 or higher installed on your system.
-- Git installed.
+1. Open the [Releases](../../releases) section of this repository.
+2. Download `RipperConverter.exe` under the latest release.
+3. Run `RipperConverter.exe`.
+4. Paste the media link, select `1` (MP4) or `2` (MP3), and press Enter.
+5. Files are saved directly to your `Downloads` directory.
+6. Enter `0` or `exit` to close the application.
 
-### 2. Clone the Repository
+> **Note:** If an Instagram or Twitter (X) link requires authentication, place your exported `cookies.txt` in the same directory as the executable.
+
+---
+
+## Running from Source
+
+### 1. Requirements
+- Python 3.8+
+- Git
+
+### 2. Setup
 ```bash
 git clone https://github.com/SEU-USUARIO/ripper-converter.git
 cd ripper-converter
-```
 
-### 3. Set Up a Virtual Environment (Recommended)
-```bash
-# Windows
+# Virtual environment
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate   # Linux/macOS: source venv/bin/activate
 
-# Linux / macOS
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 4. Install Dependencies
-```bash
+# Dependencies
 pip install -r requirements.txt
 ```
 
-> **Note on FFmpeg:** The project uses `imageio-ffmpeg` to bundle and point to an FFmpeg binary automatically. No manual system PATH configuration for FFmpeg is needed.
-
-### 5. Run the Application
+### 3. Run
 ```bash
 python main.py
 ```
 
 ---
 
-## 📦 Building the Executable with PyInstaller
+## Build Standalone Executable
 
-If you want to package the source code into a standalone `.exe` on Windows:
+To compile into a single `.exe` via PyInstaller on Windows:
 
 ```bash
 pip install pyinstaller
 pyinstaller --onefile --name "RipperConverter" --copy-metadata yt-dlp main.py
 ```
 
-The compiled standalone executable will be located inside the generated `dist/` directory.
+Output binary: `dist/RipperConverter.exe`.
 
 ---
 
-## 📄 License & Credits
+## License & Credits
 
 Developed by **Luqueta Codes©** — All rights reserved.
