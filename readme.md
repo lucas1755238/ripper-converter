@@ -19,8 +19,8 @@ A command-line media downloader for YouTube, Instagram, and Twitter (X). Downloa
 ## Windows Executable (No Python Required)
 
 1. Open the [Releases](../../releases) section of this repository.
-2. Download `RipperConverter.exe` under the latest release.
-3. Run `RipperConverter.exe`.
+2. Download `rip.exe` under the latest release.
+3. Run `rip.exe`.
 4. Paste the media link, select `1` (MP4) or `2` (MP3), and press Enter.
 5. Files are saved directly to your `Downloads` directory.
 6. Enter `0` or `exit` to close the application.
